@@ -1,0 +1,15 @@
+{
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "description": "url shortner",
+  "main": "server.ts",
+  "scripts": {
+    "start":"",
+    "dev":""
+  },
+  "keywords": [
+    "url_shortner"
+  ],
+  "author": "pacifique murangwa {pacifiquem@github.com}",
+  "license": "MIT"
+}
