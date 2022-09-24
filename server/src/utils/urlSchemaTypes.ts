@@ -7,14 +7,11 @@ interface urlSI extends mongoose.Document {
         type: String,
         required: boolean,
         unique: boolean,
-        match: String
     },
 
     genUrl: {
         type: String
         required: boolean,
-        unique: boolean,
-        match: String
     },
 
     visitCount: {
