@@ -3,22 +3,23 @@ import urlSI from "../utils/urlSchemaTypes";
 
 const UrlSchema:mongoose.Schema = new mongoose.Schema<urlSI>({
     url: {
+        type: String,
         required: true,
-        unique: false,
-        match:  '^(?:(?:http(?:s)?|ftp)://)(?:\\S+(?::(?:\\S)*)?@)?(?:(?:[a-z0-9\u00a1-\uffff](?:-)*)*(?:[a-z0-9\u00a1-\uffff])+)(?:\\.(?:[a-z0-9\u00a1-\uffff](?:-)*)*(?:[a-z0-9\u00a1-\uffff])+)*(?:\\.(?:[a-z0-9\u00a1-\uffff]){2,})(?::(?:\\d){2,5})?(?:/(?:\\S)*)?$'
+        unique: true
     },
 
     genUrl: {
-        required: true,
-        unique: true,
-        match: '^(?:(?:http(?:s)?|ftp)://)(?:\\S+(?::(?:\\S)*)?@)?(?:(?:[a-z0-9\u00a1-\uffff](?:-)*)*(?:[a-z0-9\u00a1-\uffff])+)(?:\\.(?:[a-z0-9\u00a1-\uffff](?:-)*)*(?:[a-z0-9\u00a1-\uffff])+)*(?:\\.(?:[a-z0-9\u00a1-\uffff]){2,})(?::(?:\\d){2,5})?(?:/(?:\\S)*)?$'
+        type: String,
+        required: true
     },
 
     visitCount: {
+        type: Number,
         default: 0,
     },
 
     createAt: {
+        type: Date,
         default: new Date()
     }
 
