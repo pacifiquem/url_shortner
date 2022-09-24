@@ -3,12 +3,14 @@ import * as dotenv from 'dotenv';
 import mongoSanitize from 'express-mongo-sanitize';
 import dbConfig from './config/db.config';
 import router from './routers/url.routers';
+import helmet from 'helmet';
 
 dotenv.config({
     path: `${__dirname}/config/.env`
 });
 
 const app:Application = express();
+app.use(helmet());
 dbConfig();
 
 app.use(express.json());
