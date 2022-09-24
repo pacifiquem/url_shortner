@@ -6,6 +6,72 @@
 
 .nav {
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
+    background-color: #ffffff;
+    padding: 3em 0;
+    /* box-shadow: 0 0 3px 1px rgba(88, 88, 88, 0.3); */
+}
+
+.nav h1  {
+    text-align: center;
+    color: #0186da;
+    font: 1000 2.8em asap,arial;
+    font-stretch: 100%;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 2px #ddd;
+    word-wrap: break-word;
+}
+
+.body {
+    height: 30vh;
+    width: 48vw;
+    margin: 1em auto;
+    box-shadow: 0 0 3px 1px rgba(88, 88, 88, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 1.5em;
+
+}
+
+.header h1 {
+    text-align: center;
+    letter-spacing: -1px;
+    font: 900 2.2em asap,arial;
+    color: #505050;
+}
+
+.input {
+    display: flex;
     background-color: black;
+    height: 22%;
+    width: 80%;
+    gap: 0;
+    margin: 0 auto;
+}
+
+.input input {
+    width: 75%;
+    padding: 1em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input button {
+    width: 25%;
+    border: 1px solid #bbb;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #2c87c5;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+}
+
+.footer-content {
+    text-align: center;
+    margin: 1.4em auto;
+    line-height: 1.6em;
 }
