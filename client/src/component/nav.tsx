@@ -4,7 +4,9 @@ import '../assets/styles/style.css';
 const NavComponent:React.FC = () => {
     return(
     <>
-        <div className="nav">URL SHORTNER</div>
+        <div className="nav">
+            <h1>Short URL</h1>
+        </div>
     </>
     );
 }
