@@ -1,6 +1,6 @@
 import express from 'express'
 import { postUrl } from '../controllers/url.controller';
-import { Schema, JoiValidation } from '../middleware/validation';
+import { Schema, JoiValidation } from '../middlewares/validation';
 
 const router = express.Router();
 
