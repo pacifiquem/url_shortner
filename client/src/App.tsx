@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './pages/home';
 import UrlCounterPage from './pages/urlCounter';
 import NoPage from './pages/noPage';
+import ContactUs from './pages/contactUs';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path='urlcounter' element={<UrlCounterPage />} />
+          <Route path='contactus' element={<ContactUs />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
