@@ -20,6 +20,7 @@
     letter-spacing: -1px;
     text-shadow: 0 2px 2px #ddd;
     word-wrap: break-word;
+    cursor: pointer;
 }
 
 .body {
