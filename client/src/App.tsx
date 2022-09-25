@@ -1,14 +1,10 @@
 import React from 'react';
-import NavComponent from './component/nav';
-import BodyComponent from './component/body';
-import FooterComponent from './component/footer';
+import HomePage from './pages/home';
 
 function App() {
   return (
     <div className="App">
-      <NavComponent />
-      <BodyComponent />
-      <FooterComponent />
+      <HomePage />
     </div>
   );
 }
