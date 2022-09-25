@@ -6,9 +6,9 @@
 
 .nav {
     width: 100vw;
-    height: 15vh;
+    height: 12vh;
     background-color: #ffffff;
-    padding: 3em 0;
+    padding: 2em 0;
     /* box-shadow: 0 0 3px 1px rgba(88, 88, 88, 0.3); */
 }
 
@@ -20,7 +20,6 @@
     letter-spacing: -1px;
     text-shadow: 0 2px 2px #ddd;
     word-wrap: break-word;
-    cursor: pointer;
 }
 
 .body {
@@ -124,7 +123,7 @@
     display: flex;
     flex-direction: row;
     gap: 1%;
-    margin: .8em auto 0;
+    margin: 1.4em auto 0;
 } 
 
 .footer-discriptioon {
@@ -155,7 +154,7 @@
 
 .author {
     width: 30vw;
-    margin: 0 auto;
+    margin: .9em auto 0;
     padding: 0 9em;
 }
 
