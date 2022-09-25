@@ -1,5 +1,5 @@
 import React from "react";
-import { BiLink, BiLinkAlt , BiBarChartSquare} from 'react-icons/bi';
+import { BiLink, BiBarChartSquare} from 'react-icons/bi';
 import {RiShieldCheckLine} from 'react-icons/ri';
 import '../assets/styles/style.css';
 
