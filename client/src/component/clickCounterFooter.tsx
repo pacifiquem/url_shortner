@@ -12,8 +12,8 @@ const ClickCounterFooter:React.FC = () => {
                 <div className='helpful-links'>
                     <a href="https://atshorturl.vercel.app">ShortUrl</a>
                     <a href="https://shorturl.vercel.app/">Url Click Counter</a>
-                    <a href="https://shorturl.vercel.app/report-marcious-url">Report Malicious URL</a>
                     <a href='https://shorturl.vercel.app/contact'>Contact</a>
+                    <a href="https://github.com/pacifiquem">Author's Github</a>
                 </div>
             </div>
         </>
