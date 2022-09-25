@@ -325,3 +325,60 @@
 .formcontainer form button:active {
     transform: scale(95%);
 }
+
+
+
+/*  Not found styles*/
+
+
+.notfound {
+    width: 50vw;
+    height: 40vh;
+    margin: 10em auto;
+}
+
+.notfound h1:nth-child(1) {
+    margin-top: .3em;
+    text-align: center;
+    color: #0186da;
+    font: 1000 2.8em asap,arial;
+    font-stretch: 100%;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 2px #ddd;
+    word-wrap: break-word;
+}
+
+.notfound h1:nth-child(2){
+    text-align: center;
+    color: #616161;
+    font: 1000 10em asap,arial;
+    font-stretch: 100%;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 2px #ddd;
+    word-wrap: break-word;
+}
+
+.notfound p:nth-child(3) {
+    text-align: center;
+    color: #616161;
+    font: 400 2em arial;
+}
+
+.notfound p:nth-child(4) {
+    margin-top: .5em;
+    text-align: center;
+    color: #252525;
+    font: 400 1.1em arial;
+}
+
+.notfound button {
+    width: 27%;
+    height: 12%;
+    color: white;
+    font: 400 1.1em arial;
+    background-color: #0186da;
+    border: 1px #0186da solid;
+    border-radius: 2px;
+    margin: 1.3em 16.5em;
+    cursor: pointer;
+}
