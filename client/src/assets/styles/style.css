@@ -98,9 +98,9 @@
 }
 
 .discription {
-    height: 25vh;
+    height: 19vh;
     width: 48vw;
-    margin: 2.5em auto;
+    margin: 2.5em auto 0;
     color: #616161;
 }
 
@@ -115,4 +115,51 @@
     font: 300 1em asap,arial;
     letter-spacing: -0.2px;
     line-height: 1.5em;
+}
+
+.footer-flex {
+    width: 60vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    margin: .8em auto 0;
+} 
+
+.footer-discriptioon {
+    width: 32.65%;
+    height: 100%;
+}
+
+.footer-discriptioon h2 {
+    color: #616161;
+    text-align: center;
+    font: 700 1.5em asap,arial;
+    margin-top: .6em;
+}
+
+.footer-discriptioon p {
+    color: #616161;
+    text-align: center;
+    font: 300 1em asap, arial;
+    margin-top: .5em;
+}
+
+.icons {
+    text-align: center;
+    font-size: 4em;
+    color: #616161;
+    margin-left: 1.8em;
+}
+
+.author {
+    width: 30vw;
+    margin: 0 auto;
+    padding: 0 9em;
+}
+
+.author a {
+    text-decoration: none;
+    color: #464343;
+    font: 200 1em asap,arial;
 }
