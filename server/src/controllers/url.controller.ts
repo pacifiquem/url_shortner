@@ -1,6 +1,8 @@
 import mongoose from "mongoose";;
 import { Request, Response, NextFunction } from "express";
 import UrlModel from "../models/url.model";
+import ContactModel from "../models/contact.model";
+import EmailSender from "../utils/EmailSender.utils";
 
 
 export const postUrl =async (req:Request, res:Response, next:NextFunction) => {
@@ -69,3 +71,25 @@ export const ClickCounter = async(req:Request, res:Response, next:NextFunction) 
 
 }
 
+export const contactUs = async(req:Request, res:Response, next: NextFunction) => {
+    try {
+        const { name, email, message }  = req.body;
+
+        const incomingChat = await new ContactModel({name, email, message});
+
+        if(incomingChat) {
+            EmailSender(res, email, message);
+        }else {
+            res.status(404).json({
+                success: false,
+                message: 'unable to insert into database'
+            });
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(404).json({
+            success: false,
+            message: 'unable to insert into database'
+        });
+    }
+}
