@@ -5,6 +5,19 @@ import ContactModel from "../models/contact.model";
 import EmailSender from "../utils/EmailSender.utils";
 
 
+export const home = async(req:Request, res:Response, next:NextFunction) => {
+    try {
+        
+        res.status(200).json({
+            success: true, 
+            message: 'welcome home'
+        });
+
+    } catch (error) {
+        
+    }
+}
+
 export const postUrl =async (req:Request, res:Response, next:NextFunction) => {
 
 try {
