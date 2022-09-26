@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose";;
 import { Request, Response, NextFunction } from "express";
 import UrlModel from "../models/url.model";
 
@@ -6,7 +6,6 @@ import UrlModel from "../models/url.model";
 export const postUrl =async (req:Request, res:Response, next:NextFunction) => {
 
 try {
-
     const { url, genUrl } = req.body;
     const NewUrl = await UrlModel.create({
         url: url,
@@ -42,15 +41,14 @@ try {
 export const ClickCounter = async(req:Request, res:Response, next:NextFunction) => {
     try {
 
-        const providedUrl  = req.body;
-        const url = await UrlModel.findOne({
-            genUrl: providedUrl
+        const Url = await UrlModel.findOne({
+            genUrl: req.body.url
         });
 
-        if(url) {
+        if(Url) {
             res.status(200).json({
                 success: 'true',
-                data: url.visitCount
+                data: Url.visitCount
             });
         }else {
             res.status(404).json({
@@ -70,3 +68,4 @@ export const ClickCounter = async(req:Request, res:Response, next:NextFunction) 
     }
 
 }
+
