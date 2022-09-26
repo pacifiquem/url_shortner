@@ -6,12 +6,12 @@ interface urlSI extends mongoose.Document {
     url: {
         type: String,
         required: boolean,
-        unique: boolean,
     },
 
     genUrl: {
         type: String
         required: boolean,
+        unique: boolean
     },
 
     visitCount: {
