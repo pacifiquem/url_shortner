@@ -1,4 +1,4 @@
-import Joi, { ObjectSchema, ref } from "joi";
+import Joi, { ObjectSchema } from "joi";
 import { Request, Response, NextFunction } from "express";
 
 
@@ -8,10 +8,10 @@ export const JoiValidation = (schema: ObjectSchema) => {
             await schema.validateAsync(req.body);
             next();
         } catch (error) {
-            console.error(error);
+            console.log(error);
             res.status(422).json({
                 success: false, 
-                message: 'invalid input'
+                message: ''
             });
         }
     }
