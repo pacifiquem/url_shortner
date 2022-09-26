@@ -88,6 +88,44 @@
     font-weight: 500;
 }
 
+#url-shower {
+    height: 30%;
+    width: 60%;
+    margin: 0 auto;
+    font: 1.3em lato,arial;
+    color: #000;
+    background: #fff;
+    border: 1px solid #bbb;
+    display: flex;
+    gap: 0;
+    border-radius: .2em;
+}
+
+#url-shower div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+}
+
+#url-shower p{
+    text-align: center;
+    color: #616161;
+}
+
+#url-shower button {
+    height: 100%;
+    width: 25%;
+    background-color: #0186da;
+    color: white !important;
+    font: 0.9em arial;
+    color: #464343;
+    border: 1px solid #0186da;
+    border-top-right-radius: .2em;
+    border-bottom-right-radius: .2em;
+}
+
 .footer-content {
     text-align: center;
     margin: 1.6em auto;
