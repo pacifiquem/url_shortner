@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/styles/style.css';
+import Spinner from 'react-bootstrap/Spinner';
 
 const ClickCounterBody:React.FC = () => {
     return (

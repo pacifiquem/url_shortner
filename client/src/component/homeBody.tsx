@@ -1,6 +1,8 @@
 import React from "react";
 import '../assets/styles/style.css';
 import UrlShower from "./homeUrlShower";
+import Spinner from 'react-bootstrap/Spinner';
+
 
 const BodyComponent:React.FC = () => {
     return(
