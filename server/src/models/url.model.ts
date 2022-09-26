@@ -4,13 +4,13 @@ import urlSI from "../utils/urlSchemaTypes";
 const UrlSchema:mongoose.Schema = new mongoose.Schema<urlSI>({
     url: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
 
     genUrl: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
 
     visitCount: {
