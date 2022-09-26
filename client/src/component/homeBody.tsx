@@ -1,5 +1,6 @@
 import React from "react";
 import '../assets/styles/style.css';
+import UrlShower from "./homeUrlShower";
 
 const BodyComponent:React.FC = () => {
     return(
