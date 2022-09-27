@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import * as dotenv from 'dotenv';
 import mongoSanitize from 'express-mongo-sanitize';
+import cors from 'cors';
 import dbConfig from './config/db.config';
 import router from './routers/url.routers';
 import helmet from 'helmet';
@@ -12,6 +13,7 @@ dotenv.config({
 
 const app:Application = express();
 app.use(helmet());
+app.use(cors());
 dbConfig();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
