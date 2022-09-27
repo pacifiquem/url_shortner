@@ -17,7 +17,7 @@ const BodyComponent:React.FC = () => {
         setshowBody({display: 'none'});
         console.log(showSpinner);
 
-        const data:void = await axios.post('https://atshorturl.herokuapp.com//addurl', {
+        const data:void = await axios.post('https://atshorturl.herokuapp.com/addurl', {
             url: inputValue
         }).then((response) => {
             console.log(response);
