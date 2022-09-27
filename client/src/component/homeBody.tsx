@@ -8,7 +8,7 @@ const BodyComponent:React.FC = () => {
     return(
     <>
         <div className="body">
-            <div className="header">
+            <div className="headers">
                 <h1>Paste the URL to be shortened</h1>
             </div>
             <div className="input">
