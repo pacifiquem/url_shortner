@@ -57,7 +57,7 @@ export const ClickCounter = async(req:Request, res:Response, next:NextFunction) 
     try {
 
         const Url = await UrlModel.findOne({
-            genUrl: req.body.url
+            genUrl: req.params.url
         });
 
         if(Url) {

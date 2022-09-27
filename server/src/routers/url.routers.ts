@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.route('/').get(home);
 router.route('/addurl').post(bodyParser.json(), genUrlGenerator, JoiValidation(Schema.data) ,postUrl);
-router.route('/clickcounter').get(bodyParser.json(), ClickCounter);
+router.route('/clickcounter?:url').get(bodyParser.json(), ClickCounter);
 router.route('/contactus').post(contactUs);
 
 export default router;
