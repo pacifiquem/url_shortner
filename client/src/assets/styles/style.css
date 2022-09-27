@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+.spinner {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.spinnerdiv {
+    height: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeSpinner {
+    margin-bottom: 2em;
+}
+
 .naver {
     width: 100vw;
     height: 12vh;
@@ -45,7 +62,7 @@
 
 .input {
     display: flex;
-    height: 22%;
+    height: 35%;
     width: 80%;
     gap: 0;
     margin: .5em auto 0;
@@ -88,8 +105,8 @@
 }
 
 #url-shower {
-    height: 30%;
-    width: 60%;
+    height: 26%;
+    width: 70%;
     margin: 0 auto;
     font: 1.3em lato,arial;
     color: #000;
@@ -100,15 +117,27 @@
     border-radius: .2em;
 }
 
+.url-headers {
+    padding: 1.5em;
+}
+
+.url-headers h1 {
+    text-align: center !important;
+    letter-spacing: -1px !important;
+    font: 900 2.2em asap,arial !important;
+    color: #616161 !important;
+}
+
 #url-shower div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 80%;
     height: 100%;
 }
 
 #url-shower p{
+    margin-top: 1em;
     text-align: center;
     color: #616161;
 }
@@ -125,14 +154,18 @@
     border-bottom-right-radius: .2em;
 }
 
-.footer-content {
+.footer-contents {
     text-align: center;
-    margin: 1.6em auto;
+    margin: 1.6em auto 0;
     line-height: 1.6em;
     font: 300 1em asap,arial;
     color: #505050;
     letter-spacing: -0.2px;
     line-height: 1.5em;
+}
+
+.footer-contents p {
+    margin-bottom: 0 !important;
 }
 
 .discription {
