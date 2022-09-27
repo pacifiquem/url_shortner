@@ -16,7 +16,7 @@ const genUrlGenerator = (req:Request, res:Response, next:NextFunction):void => {
     const generatedUrl = generateUrl();
 
     if(generatedUrl != undefined && generatedUrl != null) {
-        req.body.genUrl = `https://atshorturl.vercel.app/${generatedUrl}`;
+        req.body.genUrl = `atshorturl.herokuapp.com/${generatedUrl}`;
         next();
     }
 
