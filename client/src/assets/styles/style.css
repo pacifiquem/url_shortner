@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: 14.5px;
+    font-size: 14.6px;
 }
 
 .spinner {
@@ -298,8 +298,8 @@ body {
 }
 
 .ClickCounterfooter {
-    position: relative;
-    top: 7.4em;
+    position: absolute;
+    bottom: 0;
     height: 12vh;
     width: 100vw;
     border-top: #00a0db solid .4em;
