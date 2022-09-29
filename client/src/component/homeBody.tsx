@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, { useState } from "react";
 import '../assets/styles/style.css';
 import axios from 'axios';
 import UrlShower from "./homeUrlShower";
@@ -17,12 +17,13 @@ const BodyComponent:React.FC = () => {
         setshowBody({display: 'none'});
         console.log(showSpinner);
 
-        const data:void = await axios.post('https://atshorturl.herokuapp.com/addurl', {
+        await axios.post('https://atshorturl.herokuapp.com/addurl', {
             url: inputValue
         }).then((response) => {
             console.log(response);
             setShortUrl(`${response.data.data.genUrl}`);
         }).catch((error) => console.log(error));
+        
     }
 
     return(
@@ -37,7 +38,7 @@ const BodyComponent:React.FC = () => {
                     <button type="submit" onClick={submitUrl}>Shorten URL</button>
                     </div>
                 </div>
-                {(shortUrl != '' && showBody.display != 'block') ?
+                {(shortUrl !== '' && showBody.display !== 'block') ?
                 (
                     <div>
                         <UrlShower url={shortUrl} />
