@@ -104,3 +104,21 @@ export const contactUs = async(req:Request, res:Response, next: NextFunction) =>
         });
     }
 }
+
+
+export const visitingUrl = async (req:Request, res:Response, next:NextFunction) => {
+
+    const url = req.params.url;
+    const originalUrl = await UrlModel.findOne({
+        url
+    });
+
+    if(originalUrl) {
+        originalUrl.visitCount = ++originalUrl.visitCount;
+        await originalUrl.save();
+        res.redirect(`${originalUrl.url}`);
+    }else {
+        res.redirect(`https://atshorturl.vercel.app/pagenotfound`);
+    }
+
+}

@@ -15,8 +15,7 @@ interface urlSI extends mongoose.Document {
     },
 
     visitCount: {
-        type: Number
-        default: Number
+        default: number
     },
 
     createAt: {
