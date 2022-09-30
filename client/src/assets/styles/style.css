@@ -56,6 +56,7 @@ body {
 
 .headers {
     padding: 1.5em !important;
+    position: relative;
 }
 
 .headers h1 {
@@ -264,6 +265,7 @@ body {
 
 .clickCounterHeader {
     margin: 2.5em;
+    position: relative;
 }
 
 .clickCounterHeader h1 {
@@ -357,6 +359,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 3em 2em;
+    position: relative;
 }
 
 .input-label {
@@ -474,6 +477,20 @@ body {
     margin-top: 10rem;
 }
 
+#contacterror, #homeerror, #countererror {
+    color: rgba(255, 51, 0, 0.851);
+    text-align: center;
+    position: absolute;
+    top: .5em;
+}
+
+#countererror {
+    margin-top: 4.7em;
+}
+
+#homeerror {
+    margin:  5.3em 14em;
+}
 
 
 
@@ -489,8 +506,19 @@ body {
         margin: .8em 15.1em .2em;
     }
     
+    #homeerror {
+        margin:  5.3em 12em;
+    }
 }
 
+
+@media screen and (max-width: 1200px) {
+
+    .headers h1 {
+            font: 700 2em asap,arial !important;
+    }
+    
+}
 
 @media screen and (max-width: 1152px) {
 
@@ -502,12 +530,9 @@ body {
         padding: 1.2em !important;
         height: 45%;
     }
+
     .input {
         height: 40%;
-    }
-    
-    .headers h1 {
-        font: 700 2em asap,arial !important;
     }
 
     .discription {
@@ -547,6 +572,10 @@ body {
     }
     .notfound button {
         width: 18%;
+    }
+
+    #homeerror {
+        margin:  3.3em 12.6em;
     }
 }
 
@@ -590,6 +619,10 @@ body {
 
     .notfound button {
         width: 23.5%;
+    }
+
+    #homeerror {
+        margin:  3em 10em;
     }
 }
 
@@ -754,5 +787,9 @@ body {
 
     .notfound button {
         width: 32%;
+    }
+
+    #homeerror {
+        margin:  3em 9em;
     }
 }
