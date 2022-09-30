@@ -1,8 +1,45 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
+import axios from 'axios';
 import '../assets/styles/style.css';
 import Spinner from 'react-bootstrap/Spinner';
 
 const ClickCounterBody:React.FC = () => {
+
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const [styles, setStyles] = useState({
+        fontSize: '1.2em'
+    })
+
+    const [inputUrl, setInputUrl] = useState('');
+    const [exampleUrl, setExampleUrl] = useState('Example: atshorturl.herokuapp.com/AbCdE');
+    const [buttonMessage, setButtonMessage] = useState('Submit');
+    const [readOnly, setReadOnly] = useState(false);
+
+    const returnUrlCounter = () => {
+        if(inputUrl !== '') {
+
+            axios.post('https://atshorturl.herokuapp.com/clickcounter', {
+                url: inputUrl
+            }).then((response) => {
+                setStyles({
+                    fontSize: '2.2em'
+                });
+
+                setButtonMessage(`Dowload Counts`);
+                setInputUrl(response.data.data);
+                setReadOnly(!readOnly);
+                setExampleUrl(`URL: ${inputUrl}`);
+
+            }).catch((error) => console.error(error));
+
+        }else {
+
+            alert('Please Enter Url');
+
+        }
+    }
+
     return (
         <>
             <div className="clickCounterContainer">
@@ -12,10 +49,13 @@ const ClickCounterBody:React.FC = () => {
                 </div>
                 <div className='clickCounterBody'>
                     <div className="input" id='clickCounterInput'>
-                        <input type="text" placeholder="Enter the link here" />
-                        <button type="submit">Shorten URL</button>
+                        <input type="text" required readOnly={readOnly} placeholder="Enter the link here" style={styles} ref={inputRef} value={inputUrl} onChange={(e) => {
+                            e.preventDefault();
+                            setInputUrl(e.target.value)
+                            }} />
+                        <button type="submit" onClick={returnUrlCounter} id="clickCounterButton">{buttonMessage}</button>
                     </div>
-                    <p>Example: shorturl.at/AbCdE</p>
+                    <p>{exampleUrl}</p>
                 </div>
                 <p>* Track the total hits of the shortened URL in real time, you do not have to register.</p>
             </div>
