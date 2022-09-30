@@ -17,6 +17,11 @@ const ContactForm:React.FC = () => {
         display: 'none'
     });
 
+    const [errpara, seterrpara] = useState({
+        display: 'none'
+    });
+
+
     const formHandler = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -33,8 +38,10 @@ const ContactForm:React.FC = () => {
                 display: 'block'
             });
 
-        }).catch((res) => {
-            console.log(res);
+        }).catch(() => {
+            seterrpara({
+                display: 'block'
+            })
         })
 
     }
@@ -45,6 +52,7 @@ const ContactForm:React.FC = () => {
             <h2 className='contact'>Contact our Team</h2>
             <div className="formcontainer">
                 <form onSubmit = {formHandler}>
+                    <p style={errpara} id="contacterror">try to resend your feedback with valid inputs !</p>
                     <div className="input-label">
                         <label htmlFor="Name">Name</label>
                         <input type="text" required value={name} onChange={(e) => setName(e.target.value)} />

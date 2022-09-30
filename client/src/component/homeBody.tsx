@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import '../assets/styles/style.css';
 import axios from 'axios';
 import UrlShower from "./homeUrlShower";
@@ -6,23 +6,39 @@ import GrowSpinner from "./Spinner";
 
 
 const BodyComponent:React.FC = () => {
+    
     const [inputValue, setInputValue]:[string, React.Dispatch<React.SetStateAction<string>>] = useState('');
     const [shortUrl, setShortUrl]:[string, React.Dispatch<React.SetStateAction<string>>] = useState('');
     const [showBody, setshowBody]:[{display: string;},React.Dispatch<React.SetStateAction<{display: string;}>>] = useState({display: 'block'});
     const [showSpinner, setShowSpinner]:[boolean, React.Dispatch<React.SetStateAction<boolean>>] = useState(false);
+    const [showError, setShowError] = useState({
+        display: 'none'
+    })
 
     const submitUrl = async() => {
 
-        setShowSpinner(!showSpinner);
-        setshowBody({display: 'none'});
-        console.log(showSpinner);
+        if(inputValue !== '' && inputValue !== "") {
 
-        await axios.post('https://atshorturl.herokuapp.com/addurl', {
-            url: inputValue
-        }).then((response) => {
-            console.log(response);
-            setShortUrl(`${response.data.data.genUrl}`);
-        }).catch((error) => console.log(error));
+            setShowSpinner(!showSpinner);
+            setshowBody({display: 'none'});
+            console.log(showSpinner);
+    
+            await axios.post('https://atshorturl.herokuapp.com/addurl', {
+                url: inputValue
+            }).then((response) => {
+                console.log(response);
+                setShortUrl(`${response.data.data.genUrl}`);
+            }).catch((error) => {
+                setShowError({
+                    display:'block'
+                })
+            });
+
+        }else {
+            setShowError({
+                display:'block'
+            })
+        }
         
     }
 
@@ -32,9 +48,10 @@ const BodyComponent:React.FC = () => {
             <div style={showBody}>
                 <div className="headers">
                     <h1>Paste the URL to be shortened</h1>
+                    <p id="homeerror" style={showError}>Please send a valid link</p>
                 </div>
                 <div className="input">
-                    <input type="text" placeholder="Enter the link here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
+                    <input type="text" required placeholder="Enter the link here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
                     <button type="submit" onClick={submitUrl}>Shorten URL</button>
                     </div>
                 </div>

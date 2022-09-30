@@ -9,12 +9,15 @@ const ClickCounterBody:React.FC = () => {
 
     const [styles, setStyles] = useState({
         fontSize: '1.2em'
-    })
+    });
 
     const [inputUrl, setInputUrl] = useState('');
     const [exampleUrl, setExampleUrl] = useState('Example: atshorturl.herokuapp.com/AbCdE');
     const [buttonMessage, setButtonMessage] = useState('Submit');
     const [readOnly, setReadOnly] = useState(false);
+    const [paraStyles, setParaStyles] = useState({
+        display: 'none'
+    });
 
     const returnUrlCounter = () => {
         if(inputUrl !== '') {
@@ -31,11 +34,17 @@ const ClickCounterBody:React.FC = () => {
                 setReadOnly(!readOnly);
                 setExampleUrl(`URL: ${inputUrl}`);
 
-            }).catch((error) => console.error(error));
+            }).catch((error) =>{
+                setParaStyles({
+                    display: 'block'
+                });
+            });
 
         }else {
 
-            alert('Please Enter Url');
+            setParaStyles({
+                display: 'block'
+            });
 
         }
     }
@@ -44,8 +53,9 @@ const ClickCounterBody:React.FC = () => {
         <>
             <div className="clickCounterContainer">
                 <div className='clickCounterHeader'>
-                <   h1>URL Click Counter</h1>
+                    <h1>URL Click Counter</h1>
                     <p>Enter the URL to find out how many clicks it has received so far.</p>
+                    <p id='countererror' style={paraStyles}>Invalid link .</p>
                 </div>
                 <div className='clickCounterBody'>
                     <div className="input" id='clickCounterInput'>
