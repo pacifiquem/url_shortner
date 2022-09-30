@@ -42,6 +42,7 @@ body {
     letter-spacing: -1px !important;
     text-shadow: 0 2px 2px #ddd !important;
     word-wrap: break-word !important;
+    cursor: pointer;
 }
 
 .body {
@@ -588,7 +589,7 @@ body {
     }
 
     .clickCounterContainer {
-        width: 86vw;
+        width: 86vw !important;
     }
 
     .contact {
@@ -696,6 +697,10 @@ body {
         width: 80vw !important;
         height: 50vh !important;
         overflow: visible;
+    }
+
+    #url-shower {
+        width: 90%;
     }
 
 }
