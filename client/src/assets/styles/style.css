@@ -348,8 +348,8 @@ body {
 }
 
 .contactFoorter {
-    position: relative;
-    top: -2.6em;
+    position: unset;
+    top: 0;
 }
 
 .formcontainer form {
@@ -511,6 +511,20 @@ body {
     .author a {
         margin-left: -5em;
     }
+
+    .contactFoorter {
+        position: unset !important;
+        margin-top: 5em;
+    }
+
+    .formcontainer {
+        width: 55vw;
+    }
+
+    .contact {
+        margin: .8em 11.1em .2em !important;
+    }
+    
     
 }
 
@@ -530,6 +544,15 @@ body {
     .clickCounterContainer {
         width: 70vw;
     }
+
+    .contact {
+        margin: .8em 9em .2em !important;
+    }
+    
+
+    .formcontainer {
+        width: 60vw !important;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -539,6 +562,15 @@ body {
 
     .clickCounterContainer {
         width: 80vw;
+    }
+
+    .contact {
+        margin: .8em 7em .2em !important;
+    }
+    
+
+    .formcontainer {
+        width: 60vw !important;
     }
 }
 
@@ -558,13 +590,19 @@ body {
     .clickCounterContainer {
         width: 86vw;
     }
+
+    .contact {
+        margin: .8em 5em .2em !important;
+    }
+    
+    .formcontainer {
+        width: 65vw !important;
+    }
 }
 
 
 @media screen and (max-width: 670px) {
-    * {
-        overflow: hidden;
-    }
+
     .body, .discription {
         width: 85vw;
     }
@@ -586,16 +624,21 @@ body {
         margin-top: 0 !important;
         width: 90vw !important;
     }
+
+    .formcontainer {
+        width: 73vw !important;
+    }
+
+    .contact {
+        margin: .8em 4em .2em !important;
+    }
+    
 }
 
 
 
 
 @media screen and (max-width: 550px) {
-
-* {
-    overflow: hidden;
-}
 
     body {
         font-size: 13px;
@@ -641,6 +684,20 @@ body {
         width: 100vw !important;
     }
 
+    .contact {
+        margin: 1em 2em !important;
+    }
+
+    .input-label {
+        overflow: visible;
+    }
+
+    .formcontainer {
+        width: 80vw !important;
+        height: 50vh !important;
+        overflow: visible;
+    }
+
 }
 
 
@@ -648,4 +705,15 @@ body {
     .clickCounterContainer {
         width: 60vw;
     }
+}
+
+@media screen and (max-width: 1300px) {
+    .formcontainer {
+        width: 40vw;
+    }
+
+    .contact {
+        margin: .8em 15.1em .2em;
+    }
+    
 }
