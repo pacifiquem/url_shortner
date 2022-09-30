@@ -411,9 +411,12 @@ body {
 
 
 .notfound {
-    width: 50vw;
-    height: 40vh;
-    margin: 10em auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .notfound h1:nth-child(1) {
@@ -448,17 +451,17 @@ body {
     text-align: center;
     color: #252525;
     font: 400 1.1em arial;
+    margin: 0 2em 1em;
 }
 
 .notfound button {
-    width: 27%;
-    height: 12%;
+    width: 15%;
+    height: 6%;
     color: white;
     font: 400 1.1em arial;
     background-color: #0186da;
     border: 1px #0186da solid;
     border-radius: 2px;
-    margin: 1.3em 16.5em;
     cursor: pointer;
 }
 
@@ -468,8 +471,16 @@ body {
 
 
 
+@media screen and (max-width: 1300px) {
+    .formcontainer {
+        width: 40vw;
+    }
 
-
+    .contact {
+        margin: .8em 15.1em .2em;
+    }
+    
+}
 
 
 @media screen and (max-width: 1152px) {
@@ -519,14 +530,27 @@ body {
     }
 
     .formcontainer {
-        width: 55vw;
+        width: 40vw !important;
     }
 
     .contact {
         margin: .8em 11.1em .2em !important;
     }
-    
-    
+    .notfound button {
+        width: 18%;
+    }
+}
+
+
+
+@media screen and (max-width: 1070px) {
+    .clickCounterContainer {
+        width: 60vw;
+    }
+
+    .notfound button {
+        width: 20%;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -552,7 +576,11 @@ body {
     
 
     .formcontainer {
-        width: 60vw !important;
+        width: 55vw !important;
+    }
+
+    .notfound button {
+        width: 23.5%;
     }
 }
 
@@ -573,6 +601,11 @@ body {
     .formcontainer {
         width: 60vw !important;
     }
+
+    .notfound button {
+        width: 25%;
+    }
+
 }
 
 @media screen and (max-width: 770px) {
@@ -598,6 +631,10 @@ body {
     
     .formcontainer {
         width: 65vw !important;
+    }
+
+    .notfound button {
+        width: 27%;
     }
 }
 
@@ -633,7 +670,10 @@ body {
     .contact {
         margin: .8em 4em .2em !important;
     }
-    
+
+    .notfound button {
+        width: 29.5%;
+    }
 }
 
 
@@ -703,22 +743,7 @@ body {
         width: 90%;
     }
 
-}
-
-
-@media screen and (max-width: 1070px) {
-    .clickCounterContainer {
-        width: 60vw;
+    .notfound button {
+        width: 32%;
     }
-}
-
-@media screen and (max-width: 1300px) {
-    .formcontainer {
-        width: 40vw;
-    }
-
-    .contact {
-        margin: .8em 15.1em .2em;
-    }
-    
 }
