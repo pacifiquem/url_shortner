@@ -48,7 +48,7 @@ body {
     height: 30vh;
     width: 48vw;
     margin: 1em auto;
-    box-shadow: 0 0 3px 1px rgba(88, 88, 88, 0.2);
+    box-shadow: 0 0 4px 1px rgba(88, 88, 88, 0.3);
     display: flex;
     flex-direction: column;
 }
@@ -293,8 +293,12 @@ body {
 
 #clickCounterInput {
     height: 55%;
-    width: 80%;
+    width: 85%;
 
+}
+
+#clickCounterButton {
+    width: 45%;
 }
 
 .ClickCounterfooter {
@@ -455,4 +459,166 @@ body {
     border-radius: 2px;
     margin: 1.3em 16.5em;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1152px) {
+
+    .body {
+        width: 60vw;
+    }
+    
+    .headers {
+        padding: 1.2em !important;
+        height: 45%;
+    }
+    .input {
+        height: 40%;
+    }
+    
+    .headers h1 {
+        font: 700 2em asap,arial !important;
+    }
+
+    .discription {
+        width: 70vw;
+        margin: 2.5em auto 0;
+    }
+    
+    .footer-discriptioon h2 {
+        font: 600 1.5em asap,arial;
+        /* margin-top: .6em; */
+    }
+    
+    .footer-discriptioon p {
+        font: 300 1em asap, arial;
+        margin-top: .5em;
+    }
+    
+    .icons {
+        margin-left: 1.5em;
+    }
+    
+    .author a {
+        margin-left: -5em;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .body, .discription {
+        width: 70vw;
+    }
+
+    .footer-flex {
+        width: 80%;
+    }
+
+    .icons {
+        margin-left: 1.5em;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .footer-flex{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .body, .discription {
+        width: 85vw;
+    }
+
+    .footer-flex{
+        width: 95%;
+    }
+
+    .icons {
+        margin-left: 1.5em;
+    }
+}
+
+
+@media screen and (max-width: 670px) {
+    * {
+        overflow: hidden;
+    }
+    .body, .discription {
+        width: 85vw;
+    }
+
+    .footer-flex{
+        width: 95%;
+        margin-top: 3em;
+    }
+
+    .author {
+        margin-top: .2em;
+    }
+
+    .icons {
+        margin-left: 1.4em;
+    }
+}
+
+
+
+
+@media screen and (max-width: 550px) {
+
+* {
+    overflow: hidden;
+}
+
+    body {
+        font-size: 13px;
+    }
+
+    .body {
+        width: 85%;
+    }
+
+    .input{
+        width: 90%;
+    }
+
+    .input button {
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    .discription {
+        width: 90%;
+    }
+
+    .footer-flex {
+        width: 90%;
+        margin-top: 1.2em;
+    }
+
+    .icons {
+        margin-left: 1em;
+    }
+
+    .footer-discriptioon h2 {
+        font: 600 2em arial;
+        margin-top: 0;
+    }
+
+    .footer-discriptioon p{ 
+        margin-top: 0;
+    }
+
 }
