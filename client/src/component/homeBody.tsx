@@ -21,13 +21,12 @@ const BodyComponent:React.FC = () => {
 
             setShowSpinner(!showSpinner);
             setshowBody({display: 'none'});
-            console.log(showSpinner);
     
             await axios.post('https://atshorturl.herokuapp.com/addurl', {
                 url: inputValue
             }).then((response) => {
                 console.log(response);
-                setShortUrl(`${response.data.data.genUrl}`);
+                setShortUrl(`${response.data.data}`);
             }).catch((error) => {
                 setShowError({
                     display:'block'
@@ -81,7 +80,7 @@ const BodyComponent:React.FC = () => {
             <div className="paragraphs">
                 <p> ShortURL allows to reduce long links from Instagram, Facebook, YouTube, Twitter, Linked In and top sites on
                     the Internet, just paste the long URL and click the Shorten URL button. On the next screen, copy the
-                    shortened URL and share it on websites, chat and e-mail. After shortening the URL, check how many clicks it received.
+                    shortened URL and share it on websites, chat and e-mail. After shortening the URL,<a href="/urlcounter">check how many clicks it received</a>.
                 </p>
             </div>
         </div>
