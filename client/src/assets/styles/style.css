@@ -526,12 +526,19 @@ body {
     .icons {
         margin-left: 1.5em;
     }
-    
+
+    .clickCounterContainer {
+        width: 70vw;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .footer-flex{
         width: 85%;
+    }
+
+    .clickCounterContainer {
+        width: 80vw;
     }
 }
 
@@ -546,6 +553,10 @@ body {
 
     .icons {
         margin-left: 1.5em;
+    }
+
+    .clickCounterContainer {
+        width: 86vw;
     }
 }
 
@@ -569,6 +580,11 @@ body {
 
     .icons {
         margin-left: 1.4em;
+    }
+
+    .clickCounterContainer {
+        margin-top: 0 !important;
+        width: 90vw !important;
     }
 }
 
@@ -621,4 +637,15 @@ body {
         margin-top: 0;
     }
 
+    .clickCounterContainer {
+        width: 100vw !important;
+    }
+
+}
+
+
+@media screen and (max-width: 1070px) {
+    .clickCounterContainer {
+        width: 60vw;
+    }
 }
