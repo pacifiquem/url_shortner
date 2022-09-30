@@ -465,6 +465,15 @@ body {
     cursor: pointer;
 }
 
+#feedback {
+    display: inline;
+    text-align: center;
+    font-size: 4rem;
+    color: #505050;
+    text-shadow: 3px 3px 5px rgb(158, 158, 158);
+    margin-top: 10rem;
+}
+
 
 
 
