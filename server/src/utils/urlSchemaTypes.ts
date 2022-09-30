@@ -12,11 +12,7 @@ interface urlSI extends mongoose.Document {
         type: String
         required: boolean,
         unique: boolean
-    },
-
-    visitCount: {
-        default: number
-    },
+    }
 
     createAt: {
         type: Date

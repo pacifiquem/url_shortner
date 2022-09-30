@@ -23,20 +23,19 @@ try {
     const NewUrl = await UrlModel.create({
         url: url,
         genUrl: genUrl
-    }, (err, data) => {
-        if(err) {
-            console.log(err)
-            res.status(404).json({
-                success: false,
-                message: 'unable to insert into database'
-            });
-        }else {
-            res.status(201).json( {
-                success: true,
-                data: data
-            });
-        }
     });
+
+    if(NewUrl) {
+        res.status(201).json( {
+            success: true,
+            data: NewUrl.genUrl
+        });
+    }else {
+        res.status(422).json({
+            success: false,
+            message: 'invalid inputs'
+        });
+    }
 
 } catch (error) {
 

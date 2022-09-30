@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import urlSI from "../utils/urlSchemaTypes";
 
-const UrlSchema:mongoose.Schema = new mongoose.Schema<urlSI>({
+const UrlSchema:mongoose.Schema = new mongoose.Schema({
     url: {
         type: String,
         required: true
@@ -24,6 +24,6 @@ const UrlSchema:mongoose.Schema = new mongoose.Schema<urlSI>({
 
 });
 
-const UrlModel = mongoose.model<urlSI>('Url', UrlSchema);
+const UrlModel = mongoose.model('Url', UrlSchema);
 
 export default UrlModel;
