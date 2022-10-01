@@ -14,6 +14,7 @@ const UrlSchema:mongoose.Schema = new mongoose.Schema({
     },
 
     visitCount: {
+        type: Number,
         default: 0
     },
 
