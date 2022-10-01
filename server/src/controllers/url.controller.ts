@@ -107,7 +107,9 @@ export const contactUs = async(req:Request, res:Response, next: NextFunction) =>
 
 export const visitingUrl = async (req:Request, res:Response, next:NextFunction) => {
 
-    const url = req.params.url;
+    const identifier = req.params.url;
+    const url = `atshorturl.herokuapp.com/${identifier}`
+
     const originalUrl = await UrlModel.findOne({
         genUrl: url
     });
