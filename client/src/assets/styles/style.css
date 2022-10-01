@@ -793,3 +793,22 @@ body {
         margin:  3em 9em;
     }
 }
+
+@media screen and (max-width: 450px) {
+
+    .input {
+        border: 2px solid rgba(128, 128, 128, 0.515);
+    }
+    .footer-flex {
+        margin-top: 3em;
+    }
+
+    .footer-discriptioon h2 {
+        font: 500 1.7em arial;
+    }
+
+    .icons {
+        margin-left: .6em;
+    }
+}
+
