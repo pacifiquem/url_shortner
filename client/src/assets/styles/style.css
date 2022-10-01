@@ -797,7 +797,7 @@ body {
 @media screen and (max-width: 450px) {
 
     .input {
-        border: 2px solid rgba(128, 128, 128, 0.515);
+        border: 1px solid rgba(128, 128, 128, 0.241);
     }
     .footer-flex {
         margin-top: 3em;
@@ -812,3 +812,48 @@ body {
     }
 }
 
+@media screen and (max-width: 390px) {
+
+    .body {
+        height: 25vh;
+    }
+
+    .headers h1 {
+        font-weight: 600 !important;
+        font-size: 1.4em !important;
+    }
+
+
+    .discription {
+        margin-top: 4em;
+    }
+
+    .discription h2 {
+        font-weight: 600;
+        font-size: 1.4em;
+    }
+
+    .footer-flex {
+        margin-top: 5em;
+        margin-bottom: 2em;
+    }
+
+    .footer-contents {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .body {
+        margin-top: 3rem !important;
+    }
+
+    .discription {
+        margin-top: 3rem;
+    }
+
+    .footer-flex {
+        margin-top: 7rem !important;
+        margin-bottom: 6rem !important;
+    }
+}
