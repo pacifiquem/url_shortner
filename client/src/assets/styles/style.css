@@ -857,3 +857,75 @@ body {
         margin-bottom: 6rem !important;
     }
 }
+
+
+@media screen and (max-height: 700px) {
+    .body {
+        height: 37vh;
+    }
+}
+
+@media screen and (max-height: 640px){
+    .body {
+        margin-top: 3rem;
+        height: 40vh;
+    }
+
+    .discription {
+        margin-top: 3rem;
+    }
+
+    .footer-flex {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .body {
+        height: 50vh;
+    }
+
+    .footer-flex {
+        margin-top: 5rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .body {
+        height: 60vh;
+    }
+
+    .footer-flex {
+        margin-top: 7rem;
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .body {
+        height: 80vh;
+    }
+
+    .clickCounterHeader {
+        margin-top: 6rem;
+    }
+
+    .clickCounterBody {
+        height: 70vh;
+    }
+
+}
+
+@media  screen and (max-height: 320px) {
+    .body {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-height: 280px) {
+    .body {
+        height: 150vh;
+    }
+}
