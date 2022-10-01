@@ -109,7 +109,7 @@ export const visitingUrl = async (req:Request, res:Response, next:NextFunction) 
 
     const url = req.params.url;
     const originalUrl = await UrlModel.findOne({
-        url
+        genUrl: url
     });
 
     if(originalUrl) {
