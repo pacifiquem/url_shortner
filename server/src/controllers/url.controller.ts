@@ -12,7 +12,7 @@ export const home = async(req:Request, res:Response, next:NextFunction) => {
         });
 
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
@@ -39,7 +39,7 @@ try {
 
 } catch (error) {
 
-    console.log(error)
+    console.error(error)
     res.status(500).json({
         success: 'false',
         message: 'server have failed'
@@ -71,7 +71,7 @@ export const ClickCounter = async(req:Request, res:Response, next:NextFunction) 
 
     } catch (error) {
 
-        console.log(error)
+        console.error(error)
         res.status(500).json({
             success: 'false',
             message: 'server have failed'
@@ -106,20 +106,28 @@ export const contactUs = async(req:Request, res:Response, next: NextFunction) =>
 
 
 export const visitingUrl = async (req:Request, res:Response, next:NextFunction) => {
+try {
 
     const identifier = req.params.url;
-    const url = `atshorturl.herokuapp.com/${identifier}`
-
-    const originalUrl = await UrlModel.findOne({
-        genUrl: url
+    const Document = await UrlModel.findOne({
+        genUrl: `atshorturl.herokuapp.com/${identifier}`
     });
 
-    if(originalUrl) {
-        originalUrl.visitCount = ++originalUrl.visitCount;
-        await originalUrl.save();
-        res.redirect(`${originalUrl.url}`);
+    if(Document) {
+
+        ++Document.visitCount;
+        await Document.save();
+        res.redirect(301, `https://${Document.url}`)
+
     }else {
-        res.redirect(`https://atshorturl.vercel.app/pagenotfound`);
+       res.redirect(`https://atshorturl.vercel.app/pagenotfound`)
     }
 
+} catch (error) {
+    console.error(error);
+    res.json({
+        success: true, 
+        message: 'urlnotfound'
+    });
+}
 }
