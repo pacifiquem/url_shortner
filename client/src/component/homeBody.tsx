@@ -25,7 +25,13 @@ const BodyComponent:React.FC = () => {
             await axios.post('https://atshorturl.herokuapp.com/addurl', {
                 url: inputValue
             }).then((response) => {
-                setShortUrl(`${response.data.data}`);
+                if(response.data.data) {
+                    setShortUrl(`${response.data.data}`);
+                }else {
+                    setShowError({
+                        display:'block'
+                    })
+                }
             }).catch((error) => {
                 setShowError({
                     display:'block'
