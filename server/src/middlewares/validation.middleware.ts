@@ -21,7 +21,7 @@ export const JoiValidation = (schema: ObjectSchema) => {
 export const Schema = {
 
     data: Joi.object ({
-        url: Joi.string().required().pattern(new RegExp('^(?:https?://|s?ftps?://)?(?!www | www\.)[A-Za-z0-9_-]+\.+[A-Za-z0-9.\/%&=\?_:;-]+$')),
+        url: Joi.string().required().pattern(new RegExp('[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)')),
         genUrl: Joi.string().required().pattern(new RegExp('^(?:https?://|s?ftps?://)?(?!www | www\.)[A-Za-z0-9_-]+\.+[A-Za-z0-9.\/%&=\?_:;-]+$'))
     })
     
