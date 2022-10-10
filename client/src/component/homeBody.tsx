@@ -30,18 +30,33 @@ const BodyComponent:React.FC = () => {
                 }else {
                     setShowError({
                         display:'block'
-                    })
+                    });
+
+                    setTimeout(() => {
+                        setShowError({
+                            display:'none'
+                        });
+                    }, 2000);
                 }
             }).catch((error) => {
                 setShowError({
                     display:'block'
-                })
+                });
+
+                
             });
 
         }else {
             setShowError({
                 display:'block'
-            })
+            });
+
+            setTimeout(() => {
+                setShowError({
+                    display:'none'
+                });
+            }, 2000);
+            
         }
         
     }

@@ -41,7 +41,13 @@ const ContactForm:React.FC = () => {
         }).catch(() => {
             seterrpara({
                 display: 'block'
-            })
+            });
+
+            setTimeout(() => {
+                seterrpara({
+                    display:'none'
+                });
+            }, 2000);
         })
 
     }

@@ -38,6 +38,12 @@ const ClickCounterBody:React.FC = () => {
                 setParaStyles({
                     display: 'block'
                 });
+
+                setTimeout(() => {
+                    setParaStyles({
+                        display:'none'
+                    });
+                }, 2000);
             });
 
         }else {
@@ -45,6 +51,12 @@ const ClickCounterBody:React.FC = () => {
             setParaStyles({
                 display: 'block'
             });
+
+            setTimeout(() => {
+                setParaStyles({
+                    display:'none'
+                });
+            }, 2000);
 
         }
     }
