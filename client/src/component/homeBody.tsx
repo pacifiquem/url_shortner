@@ -17,7 +17,7 @@ const BodyComponent:React.FC = () => {
 
     const submitUrl = async() => {
 
-        if(inputValue !== '' && inputValue !== "") {
+        if(inputValue !== '' && inputValue !== "" && inputValue.match(/^(http(s)?:\/\/)[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/)) {
 
             setShowSpinner(!showSpinner);
             setshowBody({display: 'none'});
@@ -52,10 +52,10 @@ const BodyComponent:React.FC = () => {
             <div style={showBody}>
                 <div className="headers">
                     <h1>Paste the URL to be shortened</h1>
-                    <p id="homeerror" style={showError}>Please send a valid link</p>
+                    <p id="homeerror" style={showError}>Please send a valid link ex: https://abc.xyz</p>
                 </div>
                 <div className="input">
-                    <input type="text" required placeholder="Enter the link here" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
+                    <input type="text" required placeholder="https://abcd.xyz" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
                     <button type="submit" onClick={submitUrl}>Shorten URL</button>
                     </div>
                 </div>
