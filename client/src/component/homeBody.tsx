@@ -25,7 +25,6 @@ const BodyComponent:React.FC = () => {
             await axios.post('https://atshorturl.herokuapp.com/addurl', {
                 url: inputValue
             }).then((response) => {
-                console.log(response);
                 setShortUrl(`${response.data.data}`);
             }).catch((error) => {
                 setShowError({
