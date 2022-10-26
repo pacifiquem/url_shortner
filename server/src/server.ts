@@ -13,7 +13,9 @@ dotenv.config({
 
 const app:Application = express();
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+    origin: 'https://atshorturl.vercel.app/'
+}));
 dbConfig();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
