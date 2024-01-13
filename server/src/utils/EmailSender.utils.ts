@@ -3,9 +3,7 @@ import dotenv from 'dotenv';
 import { Response } from 'express';
 import path from 'path'
 
-dotenv.config({
-    path: `../${path.join(__dirname, '..', 'config')}/.env`
-});
+dotenv.config();
 
 const EmailSender = (res:Response, email:string, message:string):void => {
     

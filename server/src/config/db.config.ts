@@ -1,9 +1,7 @@
 import * as dotenv from "dotenv";
 import mongoose from "mongoose";
 
-dotenv.config({
-   path: `${__dirname}/.env`
-});
+dotenv.config();
 
 const dbConfig = async ():Promise<void>  => {
 

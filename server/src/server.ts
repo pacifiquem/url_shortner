@@ -7,9 +7,7 @@ import router from './routers/url.routers';
 import helmet from 'helmet';
 import bodyParser from 'body-parser';
 
-dotenv.config({
-    path: `${__dirname}/config/.env`
-});
+dotenv.config();
 
 const app:Application = express();
 app.use(helmet());
