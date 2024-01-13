@@ -12,7 +12,7 @@ const ClickCounterBody:React.FC = () => {
     });
 
     const [inputUrl, setInputUrl] = useState('');
-    const [exampleUrl, setExampleUrl] = useState('Example: atshorturl.herokuapp.com/AbCdE');
+    const [exampleUrl, setExampleUrl] = useState('Example: https://url-shortner-backend-service.onrender.com/AbCdE');
     const [buttonMessage, setButtonMessage] = useState('Submit');
     const [readOnly, setReadOnly] = useState(false);
     const [paraStyles, setParaStyles] = useState({
@@ -22,7 +22,7 @@ const ClickCounterBody:React.FC = () => {
     const returnUrlCounter = () => {
         if(inputUrl !== '') {
 
-            axios.post('https://atshorturl.herokuapp.com/clickcounter', {
+            axios.post('https://url-shortner-backend-service.onrender.com/clickcounter', {
                 url: inputUrl
             }).then((response) => {
                 setStyles({

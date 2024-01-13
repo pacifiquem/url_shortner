@@ -22,7 +22,7 @@ const BodyComponent:React.FC = () => {
             setShowSpinner(!showSpinner);
             setshowBody({display: 'none'});
     
-            await axios.post('https://atshorturl.herokuapp.com/addurl', {
+            await axios.post('https://url-shortner-backend-service.onrender.com/addurl', {
                 url: inputValue
             }).then((response) => {
                 if(response.data.data) {
