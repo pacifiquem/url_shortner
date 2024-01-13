@@ -16,7 +16,7 @@ const genUrlGenerator = (req:Request, res:Response, next:NextFunction):void => {
     const generatedUrl = generateUrl();
 
     if(generatedUrl != undefined && generatedUrl != null) {
-        req.body.genUrl = `atshorturl.herokuapp.com/${generatedUrl}`;
+        req.body.genUrl = `url-shortner-backend-service.onrender.com/${generatedUrl}`;
         next();
     }
 
